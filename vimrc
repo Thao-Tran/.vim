@@ -58,7 +58,11 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 " Airline config
-" Enable ale statusline extension
+" Enable powerline fonts
+let g:airline_powerline_fonts = 1
+" Enable ale extension
 let g:airline#extensions#ale#enabled = 1
+" Enable branch extension
+let g:airline#extensions#branch#enabled = 1
 
 silent! helptags ALL

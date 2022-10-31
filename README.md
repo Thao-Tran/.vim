@@ -9,10 +9,12 @@ git submodule update --init --recursive
 
 ## Plugins
 ### Display
-* [onedark.vim](https://github.com/joshdick/onedark.vim) 
+* [onedark.vim](https://github.com/joshdick/onedark.vim)
 * [NERDTree](https://github.com/preservim/nerdtree)
 * [vim-airline](https://github.com/vim-airline/vim-airline)
+* [vim-fugitive](https://github.com/tpope/vim-fugitive)
 
 ### Code
 * [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
 * [ale](https://github.com/dense-analysis/ale)
+
