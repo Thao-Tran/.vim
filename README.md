@@ -1,6 +1,12 @@
 # .vim config
 My personal .vim configuration that uses the Vim8 package manager.
 
+## Setup
+```
+git clone https://github.com/Thao-Tran/.vim.git
+git submodule update --init --recursive
+```
+
 ## Plugins
 ### Display
 * [onedark.vim](https://github.com/joshdick/onedark.vim) 
