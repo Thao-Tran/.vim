@@ -13,6 +13,7 @@ git submodule update --init --recursive
 * [NERDTree](https://github.com/preservim/nerdtree)
 * [vim-airline](https://github.com/vim-airline/vim-airline)
 * [vim-fugitive](https://github.com/tpope/vim-fugitive)
+* [vim-markdown](https://github.com/preservim/vim-markdown)
 
 ### Code
 * [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
