@@ -60,9 +60,6 @@ autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTa
 " Airline config
 " Enable powerline fonts
 let g:airline_powerline_fonts = 1
-" Enable ale extension
-let g:airline#extensions#ale#enabled = 1
-" Enable branch extension
-let g:airline#extensions#branch#enabled = 1
+let g:airline_extensions = ['ale', 'branch']
 
 silent! helptags ALL
