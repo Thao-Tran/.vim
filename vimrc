@@ -63,3 +63,6 @@ let g:airline_powerline_fonts = 1
 let g:airline_extensions = ['ale', 'branch']
 
 silent! helptags ALL
+
+set directory=~/.vim/swapfiles//
+set backupdir=~/.vim/backups//
