@@ -16,20 +16,20 @@ noremap <S-h> gT
 imap kj <Esc>
 map <Space> :
 
-set viminfo+=n~/.vim/viminfo
+set spell spelllang=en_ca
 set number
 set autoread
 set list listchars=trail:$,multispace:\ >
 set colorcolumn=81
 set expandtab
-set ts=2 sts=2 sw=2
+set tabstop=8 sts=2 sw=2
 
 match ErrorMsg '\s\+$'
 
-autocmd Filetype python setlocal ts=4 sts=4 sw=4
+autocmd Filetype python setlocal sts=4 sw=4
+autocmd Filetype rust setlocal sts=4 sw=4 tw=100
 
-autocmd Filetype java set tw=100
-autocmd Filetype java set makeprg=javac\ %
+autocmd Filetype java set sts=4 sw=4 tw=100 makeprg=javac\ %
 
 set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
 "
@@ -49,18 +49,48 @@ if (empty($TMUX))
   endif
 endif
 
-" NERDTree config
-" Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
-" Exit Vim if NERDTree is the only window remaining in the only tab.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-" Close the tab if NERDTree is the only window remaining in it.
-autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+if (!has("nvim"))
+  set viminfo+=n~/.vim/viminfo
 
-" Airline config
-" Enable powerline fonts
-let g:airline_powerline_fonts = 1
-let g:airline_extensions = ['ale', 'branch']
+	" ALE config
+	let g:ale_completion_enabled = 0
+	let g:ale_completion_autoimport = 0
+	let g:ale_fixers = {
+	\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+	\   'javascript': ['eslint'],
+	\   'rust': ['rustfmt'],
+	\}
+	" Only run linters named in ale_linters settings.
+	let g:ale_linters_explicit = 1
+	let g:ale_linters = {
+	\  'rust': ['analyzer'],
+	\  'javascript': ['eslint']
+	\}
+
+	" Set this variable to 1 to fix files when you save them.
+	let g:ale_fix_on_save = 1
+
+	set omnifunc=ale#completion#OmniFunc
+
+	" Airline config
+	" Enable powerline fonts
+	let g:airline_powerline_fonts = 1
+	let g:airline_extensions = ['ale', 'branch']
+
+	packadd! nerdtree
+	packadd! ale
+	packadd! nerdtree-git-plugin
+	packadd! vim-ember-hbs
+	packadd! vim-fugitive
+	packadd! vim-markdown
+elseif (has("nvim"))
+	" Airline config
+	" Enable powerline fonts
+	let g:airline_powerline_fonts = 1
+	let g:airline_extensions = ['branch']
+endif
+
+packadd! vim-airline
 
 silent! helptags ALL
 

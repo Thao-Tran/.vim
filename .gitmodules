@@ -1,27 +1,30 @@
 [submodule "pack/colours/start/onedark.vim"]
 	path = pack/colours/start/onedark.vim
 	url = https://github.com/joshdick/onedark.vim.git
-[submodule "pack/plugins/start/nerdtree"]
-	path = pack/plugins/start/nerdtree
+[submodule "pack/plugins/opt/nerdtree"]
+	path = pack/plugins/opt/nerdtree
 	url = https://github.com/preservim/nerdtree.git
-[submodule "pack/plugins/start/vim-airline"]
-	path = pack/plugins/start/vim-airline
+[submodule "pack/plugins/opt/vim-airline"]
+	path = pack/plugins/opt/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
-[submodule "pack/plugins/start/YouCompleteMe"]
-	path = pack/plugins/start/YouCompleteMe
+[submodule "pack/plugins/opt/YouCompleteMe"]
+	path = pack/plugins/opt/YouCompleteMe
 	url = https://github.com/ycm-core/YouCompleteMe.git
-[submodule "pack/plugins/start/ale"]
-	path = pack/plugins/start/ale
+[submodule "pack/plugins/opt/ale"]
+	path = pack/plugins/opt/ale
 	url = https://github.com/dense-analysis/ale.git
-[submodule "pack/plugins/start/vim-fugitive"]
-	path = pack/plugins/start/vim-fugitive
+[submodule "pack/plugins/opt/vim-fugitive"]
+	path = pack/plugins/opt/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "pack/plugins/start/nerdtree-git-plugin"]
-	path = pack/plugins/start/nerdtree-git-plugin
+[submodule "pack/plugins/opt/nerdtree-git-plugin"]
+	path = pack/plugins/opt/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
-[submodule "pack/plugins/start/vim-ember-hbs"]
-	path = pack/plugins/start/vim-ember-hbs
+[submodule "pack/plugins/opt/vim-ember-hbs"]
+	path = pack/plugins/opt/vim-ember-hbs
 	url = https://github.com/joukevandermaas/vim-ember-hbs.git
-[submodule "pack/plugins/start/vim-markdown"]
-	path = pack/plugins/start/vim-markdown
+[submodule "pack/plugins/opt/vim-markdown"]
+	path = pack/plugins/opt/vim-markdown
 	url = https://github.com/preservim/vim-markdown.git
+[submodule "pack/plugins/opt/rust.vim"]
+	path = pack/plugins/opt/rust.vim
+	url = https://github.com/rust-lang/rust.vim
